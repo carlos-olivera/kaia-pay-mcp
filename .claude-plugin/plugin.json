@@ -1,0 +1,18 @@
+{
+  "name": "kaia-pay",
+  "displayName": "Kaia-Pay",
+  "version": "0.1.0",
+  "description": "Cobros QR agénticos para comercios de Bolivia. El comercio indica monto y glosa; el servidor remoto emite el QR y el pagador confirma al escanear. Demo solo por invitación.",
+  "author": {
+    "name": "Carlos Olivera Terrazas",
+    "url": "https://github.com/carlos-olivera"
+  },
+  "homepage": "https://github.com/carlos-olivera/kaia-pay-mcp",
+  "repository": "https://github.com/carlos-olivera/kaia-pay-mcp",
+  "license": "MIT",
+  "keywords": ["payments", "qr", "bolivia", "pos", "kaia-pay"],
+  "documentationUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/README.md",
+  "supportUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/issues",
+  "privacyPolicyUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/TERMS.md"
+}

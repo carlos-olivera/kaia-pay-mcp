@@ -2,6 +2,10 @@
 
 Este texto es un aviso provisional para la demo cerrada. Sustitúyalo por la política definitiva antes de abrir el servicio más allá de la lista de comercios invitados. No es asesoría legal.
 
+## Responsable
+
+**KAIA-Bolivia SRL** (Bolivia, [kaialatam.com](https://kaialatam.com/)) opera Kaia-Pay. Política completa: [pay.kaialatam.com/privacidad.html](https://pay.kaialatam.com/privacidad.html).
+
 ## Qué es este repositorio
 
 `kaia-pay-mcp` empaqueta el plugin de Claude (skills, comandos y la vista MCP App). No guarda comercios, pagos ni credenciales. El servidor de pagos vive en [carlos-olivera/kaia-pay](https://github.com/carlos-olivera/kaia-pay) y atiende `https://mcp.kaia-pay.pay-bo.com/mcp`.
@@ -22,4 +26,4 @@ La retención de cobros, registros y tokens la define el servicio Kaia-Pay de la
 
 ## Contacto
 
-Carlos Olivera Terrazas, por los issues del repositorio: https://github.com/carlos-olivera/kaia-pay-mcp/issues
+KAIA-Bolivia SRL · [privacidad](https://pay.kaialatam.com/privacidad.html) · issues: https://github.com/carlos-olivera/kaia-pay-mcp/issues

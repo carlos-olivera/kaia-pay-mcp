@@ -6,6 +6,10 @@ Texto provisional para la demo cerrada. No es una oferta pública ni un contrato
 
 Kaia-Pay es operado por **KAIA-Bolivia SRL**, sociedad de responsabilidad limitada fundada en Bolivia ([kaialatam.com](https://kaialatam.com/)).
 
+## Publisher del plugin (Claude Directory)
+
+El plugin de Kaia-Pay listado en el Claude Directory es **publicado por ValidMe LLC** (Validme, [validme.tech](https://validme.tech/)) como *Publisher* del listing. ValidMe no opera el servicio de cobros: ese rol sigue en KAIA-Bolivia SRL. Términos completos: [pay.kaialatam.com/terminos.html](https://pay.kaialatam.com/terminos.html).
+
 ## Alcance
 
 Kaia-Pay permite a un comercio invitado cobrar con QR en bolivianos desde un agente (punto de venta agéntico, Bolivia). El monto lo indica el comercio en el momento del cobro. El servidor aplica los límites de ese comercio. El pagador acepta el pago al escanear el QR en su banca. La cuenta de liquidación está fijada en el servidor para ese comercio; el chat no la elige.

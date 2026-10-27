@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Kaia-Pay">
+<title>Kaia-Pay</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<rect width="200" height="200" rx="40" fill="#ffffff" stroke="#e6ebe9" stroke-width="2"/>
+<g transform="translate(100 100) scale(0.95) translate(-152.39 -85)">
+
+  <polyline fill="none" stroke="#00d3a1" stroke-width="3" stroke-miterlimit="10" points="80.39 126.53 80.39 43.94 152.39 4.41"/>
+  <polyline fill="none" stroke="#00d3a1" stroke-width="3" stroke-miterlimit="10" points="224.39 126.53 224.39 43.94 152.39 4.41"/>
+  <polyline fill="none" stroke="#00d3a1" stroke-width="3" stroke-miterlimit="10" points="224.39 43.79 224.39 126.38 152.39 165.91"/>
+  <polyline fill="none" stroke="#00d3a1" stroke-width="3" stroke-miterlimit="10" points="80.39 43.79 80.39 126.38 152.39 165.91"/>
+  <circle fill="#00d3a1" cx="152.39" cy="4.41" r="4.41"/>
+  <circle fill="#00d3a1" cx="152.39" cy="165.76" r="4.41"/>
+  <circle fill="#00d3a1" cx="223.8" cy="125.94" r="4.41"/>
+  <circle fill="#00d3a1" cx="223.8" cy="43.65" r="4.41"/>
+  <circle fill="#00d3a1" cx="80.33" cy="125.94" r="4.41"/>
+  <circle fill="#00d3a1" cx="80.33" cy="43.65" r="4.41"/>
+  <path fill="#000000" d="M149.85,91.21l-8.3,8.66v15.64h-14.22v-61.84h14.22v28.89l27.39-28.89h15.9l-25.62,27.56,27.12,34.28h-16.7l-19.79-24.3Z"/>
+  <polygon fill="none" stroke="#00d3a1" stroke-miterlimit="10" points="94.56 117.91 94.51 51.96 152.45 19.61 211.63 52.04 211.63 118.42 153.12 149.46 94.56 117.91"/>
+
+</g>
+</svg>

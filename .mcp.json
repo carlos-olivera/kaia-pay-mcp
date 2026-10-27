@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kaia-pay": {
+      "type": "http",
+      "url": "https://mcp.kaia-pay.pay-bo.com/mcp"
+    }
+  }
+}

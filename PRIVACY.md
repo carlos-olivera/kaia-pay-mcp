@@ -4,7 +4,9 @@ Este texto es un aviso provisional para la demo cerrada. Sustitúyalo por la pol
 
 ## Responsable
 
-**KAIA-Bolivia SRL** (Bolivia, [kaialatam.com](https://kaialatam.com/)) opera Kaia-Pay. Política completa: [pay.kaialatam.com/privacidad.html](https://pay.kaialatam.com/privacidad.html).
+**KAIA-Bolivia SRL** (Bolivia, [kaialatam.com](https://kaialatam.com/)) opera Kaia-Pay y es el responsable del tratamiento de datos del servicio de pagos. Política completa: [pay.kaialatam.com/privacidad.html](https://pay.kaialatam.com/privacidad.html).
+
+El plugin listado en el Claude Directory es **publicado por ValidMe LLC** (Validme) como Publisher del listing. ValidMe no es responsable del tratamiento de datos del servicio de pagos.
 
 ## Qué es este repositorio
 

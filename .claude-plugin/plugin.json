@@ -13,6 +13,6 @@
   "keywords": ["payments", "qr", "bolivia", "pos", "kaia-pay"],
   "documentationUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/README.md",
   "supportUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/issues",
-  "privacyPolicyUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/PRIVACY.md",
-  "termsOfServiceUrl": "https://github.com/carlos-olivera/kaia-pay-mcp/blob/master/TERMS.md"
+  "privacyPolicyUrl": "https://pay.kaialatam.com/privacidad.html",
+  "termsOfServiceUrl": "https://pay.kaialatam.com/terminos.html"
 }

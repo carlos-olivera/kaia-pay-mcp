@@ -10,6 +10,7 @@
   "homepage": "https://github.com/carlos-olivera/kaia-pay-mcp",
   "repository": "https://github.com/carlos-olivera/kaia-pay-mcp",
   "license": "MIT",
+  "icon": "./brand/logo-512.png",
   "keywords": [
     "payments",
     "qr",

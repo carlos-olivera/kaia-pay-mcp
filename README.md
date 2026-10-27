@@ -65,3 +65,7 @@ El plugin no guarda comercios ni pagos. Claude envía monto, glosa e identificad
 ## Qué queda fuera
 
 El código del servidor, Tesabiz y la liquidación están en `carlos-olivera/kaia-pay`. Si un nombre de herramienta de este paquete deja de coincidir con producción, márquelo `TODO-sync-with-server` y ajústelo contra el MCP en vivo. Los nombres de v1 usados aquí son `create_qr_charge`, `get_qr_image`, `get_payment_status`, `refresh_charge_status`, `get_daily_digest`, `cash_close` y `list_transactions`.
+
+## Brand assets
+
+Logos en `brand/` (conjunto claro: teal `#00d3a1`, K negra, fondo blanco): `logo-512.png` (ícono de la app, Claude Directory, Auth0), `logo.svg` y `lockup-horizontal.png`.

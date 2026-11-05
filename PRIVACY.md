@@ -16,7 +16,7 @@ El plugin listado en el Claude Directory es **publicado por ValidMe LLC** (Valid
 
 Al conectar el conector, Claude habla con ese servidor por HTTPS. El comercio entra con OAuth (Auth0) y los scopes `kp:read` y `kp:charge`. El servidor identifica al comercio con el token de acceso. Este paquete no incluye claves de API, secretos de Auth0 ni datos de comercios.
 
-En un cobro, el conector envía el monto en bolivianos y la glosa que el comercio dictó, y recibe de vuelta el estado del cobro, la referencia y el QR que generó el servidor. Consultas de ventas y de QR vencidos leen totales y cobros de esa misma cuenta. El pagador confirma el pago en su app bancaria, fuera de Claude. Si el servidor devuelve datos del pagador, llegan enmascarados según la respuesta de la herramienta.
+En un cobro, el conector envía el monto en bolivianos y la glosa que el comercio dictó, y recibe de vuelta el estado del cobro, la referencia y el QR que generó el servidor. Consultas de ventas y de QR vencidos leen totales y cobros de esa misma cuenta. El pagador confirma el pago en su app bancaria, fuera de Claude. Si el servidor devuelve datos del pagador, llegan enmascarados según la respuesta de la herramienta. La consulta de la última dispersión (`get_latest_settlement`) devuelve montos, estado y la cuenta de abono enmascarada. Los avisos de dispersión por correo o webhook van a los datos de contacto que el comercio registró en Kaia-Pay.
 
 ## Qué no hace el plugin
 

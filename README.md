@@ -33,6 +33,7 @@ Para una prueba local con Claude Code, desde la carpeta padre: `claude --plugin-
 - **Cobrar.** Monto en Bs y concepto. `create_qr_charge` emite el QR. `amount` es libre: Tesabiz spec v5.7 lo exige como `importe` dentro de `encript64`. Luego `get_payment_status` (y, si el comercio dice que ya le pagaron, una llamada a `refresh_charge_status`).
 - **Reenviar QR.** `get_qr_image` con `chargeId` o `reference`. Los enlaces salen de esa respuesta.
 - **Ventas hoy / resumen.** `get_daily_digest` y, si preguntan cuánto vendieron, `cash_close`.
+- **Última dispersión.** `get_latest_settlement` (solo lectura, `kp:read`) muestra el último abono de Tesabiz registrado en Kaia-Pay: periodo, monto cobrado, comisión, neto abonado y estado. Kaia-Pay informa; quien liquida es Tesabiz S.R.L.
 - **QR vencidos.** `expiredUnpaid` del digest, o `list_transactions` con `status` `expired`. Un QR vencido no se reabre.
 
 La imagen PNG, `qr_image_url` y `qr_page_url` se copian de `create_qr_charge` o `get_qr_image`. El agente no inventa ni reescribe URLs ni base64.
@@ -64,7 +65,7 @@ El plugin no guarda comercios ni pagos. Claude envía monto, glosa e identificad
 
 ## Qué queda fuera
 
-El código del servidor, Tesabiz y la liquidación están en `carlos-olivera/kaia-pay`. Si un nombre de herramienta de este paquete deja de coincidir con producción, márquelo `TODO-sync-with-server` y ajústelo contra el MCP en vivo. Los nombres de v1 usados aquí son `create_qr_charge`, `get_qr_image`, `get_payment_status`, `refresh_charge_status`, `get_daily_digest`, `cash_close` y `list_transactions`.
+El código del servidor, Tesabiz y la liquidación están en `carlos-olivera/kaia-pay`. Si un nombre de herramienta de este paquete deja de coincidir con producción, márquelo `TODO-sync-with-server` y ajústelo contra el MCP en vivo. Los nombres de v1 usados aquí son `create_qr_charge`, `get_qr_image`, `get_payment_status`, `refresh_charge_status`, `get_daily_digest`, `cash_close`, `list_transactions` y `get_latest_settlement`.
 
 ## Brand assets
 

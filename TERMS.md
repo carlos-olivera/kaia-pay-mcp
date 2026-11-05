@@ -16,6 +16,10 @@ Kaia-Pay permite a un comercio invitado cobrar con QR en bolivianos desde un age
 
 Se cobra una **comisión de procesadora de hasta el 1,5 %** del monto de cada cobro (el porcentaje concreto se fija al invitar o activar el comercio). Las liquidaciones se realizan en la cuenta bancaria indicada al registrarse, en un plazo de hasta **24 horas hábiles**, por **Tesabiz S.R.L.**, empresa en proceso de adecuación por la **A.S.F.I.**
 
+## Liquidaciones y avisos de dispersión
+
+Quien abona el dinero es **Tesabiz S.R.L.**: liquida en la cuenta bancaria registrada del comercio en hasta **24 horas hábiles**. **Kaia-Pay solo informa** y no mueve el dinero. Puede avisar por correo con «Dispersión confirmada» o «Dispersión rechazada» y, si el comercio lo configuró, también por webhook. El conector permite consultar la última dispersión en modo solo lectura (`get_latest_settlement`). Ese aviso o esa consulta no reemplazan el abono, y un aviso que no llega no cambia el estado del abono en Tesabiz. Condiciones completas: [pay.kaialatam.com/terminos.html](https://pay.kaialatam.com/terminos.html).
+
 La demo es solo por invitación (lista de acceso y flujo `/connect`). Un conector personalizado a `https://mcp.kaia-pay.pay-bo.com/mcp` y el plugin del directorio usan ese mismo servidor.
 
 ## Uso del QR

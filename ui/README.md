@@ -2,7 +2,7 @@
 
 Archivo único: `qr-charge.html`.
 
-El host (Claude) lo carga en un iframe aislado cuando el servidor MCP publica este HTML como recurso `ui://`. Este repositorio no ejecuta el servidor de pagos. El servidor de producción sigue en [carlos-olivera/kaia-pay](https://github.com/carlos-olivera/kaia-pay), URL `https://mcp.kaia-pay.pay-bo.com/mcp`.
+El host (Claude) lo carga en un iframe aislado cuando el servidor MCP publica este HTML como recurso `ui://`. Este repositorio no ejecuta el servidor de pagos. El servidor de producción sigue en [carlos-olivera/kaia-pay](https://github.com/carlos-olivera/kaia-pay), URL `https://mcp.pay.kaialatam.com/mcp`.
 
 ## Contrato que la vista espera
 
@@ -32,3 +32,8 @@ Sin ese registro, Claude sigue usando las herramientas en texto. El plugin no re
 ## Probar la vista sola
 
 Abra `qr-charge.html` en el navegador (nivel superior, sin iframe). Carga un cobro de prueba, no un QR de pago. El botón de confirmar revela la imagen; **Simular pago** cambia la insignia a Pagado.
+
+
+## Origen de esta copia
+
+`qr-charge.html` es la salida de `pnpm preview:qr-app` (plantilla del servidor, marca Kaia-Pay) con el correo de soporte quitado para el repositorio público. La fuente de verdad es `carlos-olivera/kaia-pay` (`src/apps/mcp-common/qr-charge.template.html`); el servidor genera la vista de cada tenant con su propia marca. No editar a mano: se regenera desde el servidor.

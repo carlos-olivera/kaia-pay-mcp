@@ -8,17 +8,17 @@ Agentic QR payments for invited merchants in Bolivia. The amount is a free point
 
 ## Dos formas de instalarlo
 
-Las dos hablan con `https://mcp.kaia-pay.pay-bo.com/mcp`. Conectar las dos a la vez no crea otro servidor: es el mismo URL.
+Las dos hablan con `https://mcp.pay.kaialatam.com/mcp`. Conectar las dos a la vez no crea otro servidor: es el mismo URL.
 
 ### Conector personalizado (pruebas)
 
 En Claude, agregue un conector por URL:
 
 ```text
-https://mcp.kaia-pay.pay-bo.com/mcp
+https://mcp.pay.kaialatam.com/mcp
 ```
 
-El acceso es OAuth con Auth0. Los scopes que publica el recurso son `kp:read` y `kp:charge`. El comercio tiene que estar en la lista de invitación y completar `/connect` en el servicio. Los metadatos públicos del recurso están en `https://mcp.kaia-pay.pay-bo.com/.well-known/oauth-protected-resource`. No pegue claves en el chat ni en este repositorio.
+El acceso es OAuth con Auth0. Los scopes que publica el recurso son `kp:read` y `kp:charge`. El comercio tiene que estar en la lista de invitación y completar `/connect` en el servicio. Los metadatos públicos del recurso están en `https://mcp.pay.kaialatam.com/.well-known/oauth-protected-resource`. No pegue claves en el chat ni en este repositorio.
 
 Este camino sigue válido cuando el plugin entre al directorio.
 
@@ -40,11 +40,24 @@ La imagen PNG, `qr_image_url` y `qr_page_url` se copian de `create_qr_charge` o 
 
 En v1 no hay carrito ni herramientas de SKU. Un catálogo futuro sería otra herramienta, en el servidor Kaia, que resuelva el precio en la base de Kaia y recién entonces llame a `encript64` con `importe`. Los campos opcionales de Tesabiz `codProducto` y `catProducto` no forman parte de este plugin.
 
+## Capacidades avanzadas de MCP (opcionales, según el cliente)
+
+El servidor detecta qué declara cada cliente y solo usa lo que éste soporta; los demás siguen igual que siempre.
+
+| Capacidad | Claude Desktop / Claude.ai (MCP 2026-07-28) | ChatGPT, Cursor, Grok Bot, Claude Code, Claude antiguo |
+|---|---|---|
+| Confirmación antes de cobrar, anular, reembolsar (formulario) | Formulario de confirmación | Anular pide una segunda llamada con `confirm: true`; cobrar se confirma con la vista QR o en el chat |
+| Esperar el pago o la dispersión | Tarea en segundo plano (`await_charge_payment`, `await_settlement`) | Espera acotada (hasta 25 s) y respuesta `pending` |
+| Skills | Las sirve el propio servidor (`skills/list`) | Las skills de este repositorio (ZIP/plugin) siguen funcionando |
+| Vista QR | `ui://kaia-pay/qr-charge` con la marca del comercio | Texto e imagen del QR |
+
+Las skills de este paquete siguen siendo la vía válida para instalar por ZIP o desde el directorio; si el cliente ya recibe las skills del servidor, ambas coinciden en reglas (confirmación humana, glosa como dato). Estas capacidades dependen de que el servidor tenga activo el protocolo 2026-07-28.
+
 ## Vista MCP App
 
 `ui/qr-charge.html` es la vista autocontenida (sin CDN) para el iframe. Muestra el monto y la glosa exactos de `structuredContent` y deja el QR oculto hasta el botón **Mostrar QR al cliente**. También pinta pagado o pendiente. Si el host no dibuja UI, las herramientas siguen sirviendo por su texto y su bloque de imagen.
 
-Para que Claude la renderice, el servidor de `kaia-pay` tiene que publicarla como `ui://kaia-pay/qr-charge`. Ese registro todavía no está en este repositorio. El detalle está en `ui/README.md`.
+Para que Claude la renderice, el servidor de `kaia-pay` tiene que publicarla como `ui://kaia-pay/qr-charge`. El servidor ya la publica con la marca de cada tenant, generada desde su plantilla (`src/apps/mcp-common/qr-charge.template.html` en `carlos-olivera/kaia-pay`). La copia de `ui/qr-charge.html` es una vista previa de la versión Kaia-Pay; la fuente de verdad es el servidor. El detalle está en `ui/README.md`.
 
 Abrir `ui/qr-charge.html` en el navegador muestra una vista previa local, con un dibujo que no es un QR de pago.
 
@@ -54,7 +67,7 @@ Abrir `ui/qr-charge.html` en el navegador muestra una vista previa local, con un
 - La cuenta de liquidación queda fijada en el servidor para ese comercio. Ningún parámetro de herramienta elige una cuenta de destino.
 - Quien paga confirma fuera de banda, al escanear el QR en su app bancaria.
 - El monto del POS es libre. Los topes por cobro y por ventana los aplica el servidor del comercio.
-- El conector personalizado y el plugin del directorio usan el mismo servidor: `https://mcp.kaia-pay.pay-bo.com/mcp`.
+- El conector personalizado y el plugin del directorio usan el mismo servidor: `https://mcp.pay.kaialatam.com/mcp`.
 - La MCP App exige una confirmación explícita del monto y la glosa devueltos por la herramienta antes de tratar el QR como listo para el cliente.
 - OAuth expone `kp:read` y `kp:charge`. No hay herramientas de reembolso en ese camino.
 - v1 no agrega `cart_id` ni un catálogo de SKU. El importe de `encript64` sigue siendo `amount`.

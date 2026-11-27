@@ -13,7 +13,7 @@ if (!plugin.description || !plugin.version || !plugin.author?.name || !plugin.li
   errors.push("plugin.json missing directory fields");
 }
 const server = mcp.mcpServers?.["kaia-pay"];
-if (server?.type !== "http" || server.url !== "https://mcp.kaia-pay.pay-bo.com/mcp") {
+if (server?.type !== "http" || server.url !== "https://mcp.pay.kaialatam.com/mcp") {
   errors.push(".mcp.json must point at the production MCP URL");
 }
 
@@ -49,7 +49,7 @@ if (/<script[^>]+src=/.test(html) || /unpkg\.com|esm\.sh|cdn\./.test(html)) {
 }
 
 const readme = read("README.md");
-for (const phrase of ["Security model", "mcp.kaia-pay.pay-bo.com/mcp", "kp:read", "kp:charge", "encript64"]) {
+for (const phrase of ["Security model", "mcp.pay.kaialatam.com/mcp", "kp:read", "kp:charge", "encript64"]) {
   if (!readme.includes(phrase)) errors.push(`README missing ${phrase}`);
 }
 const prose = readme.replace(/```[\s\S]*?```/g, " ");

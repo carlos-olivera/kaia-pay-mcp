@@ -2,7 +2,7 @@
 
 Archivo único: `qr-charge.html`.
 
-El host (Claude) lo carga en un iframe aislado cuando el servidor MCP publica este HTML como recurso `ui://`. Este repositorio no ejecuta el servidor de pagos. El servidor de producción sigue en [carlos-olivera/kaia-pay](https://github.com/carlos-olivera/kaia-pay), URL `https://mcp.kaia-pay.pay-bo.com/mcp`.
+El host (Claude) lo carga en un iframe aislado cuando el servidor MCP publica este HTML como recurso `ui://`. Este repositorio no ejecuta el servidor de pagos. El servidor de producción sigue en [carlos-olivera/kaia-pay](https://github.com/carlos-olivera/kaia-pay), URL `https://mcp.pay.kaialatam.com/mcp`.
 
 ## Contrato que la vista espera
 
